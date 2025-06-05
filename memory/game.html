@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Bartosz Małysa" />
+  <title>Gra W Memory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;1,100&family=Jersey+10&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <script src="scripts/animacje.js"></script>
+  <div class="content">
+    <a href="https://www.kwestiasmaku.com/kuchnia_polska/wielkanoc/zurek_na_zakwasie/przepis.html" target="_blank"  class="ad-left ad">
+            <img src="żur-żurek.gif">
+        </a>
+
+        <a href="https://ekonfident.pl" target="_blank" class="ad-right ad">
+            <img src="giphy-2.gif" a>
+        </a>
+    <div class="header">
+            <div class="logo"><img src="logo.png" alt="Logo"></div>
+            <label for="menu-toggle" id="menu-label">☰</label>
+            <!-- sorze, for=menu-toggle sprawia ze jak klikniemy w label o id menu-label to kursor automatycznie skupi sie na inpucie o id tym samym co w atrybucie for, czyli menu-toggle, robie tak poniewaz gdybym umiescil input w labelu to ciezej potem sprawic by checkbox zajmowal tyle samo miejsca co label -->
+            <input type="checkbox" id="menu-toggle" hidden>
+            <div class="nav-buttons">
+                <a href="mainpage.html"><button id="main" class="but1">Główna</button></a>
+                <a href="game.html"><button id="start" class="but1">Zagraj</button></a>
+                <a href="genesis.html"><button id="geneza" class="but1">Geneza</button></a>
+                <a href="howtoplay.html"><button id="jak" class="but1">Jak Grać</button></a>
+            </div>
+        </div>
+
+    <div class="main start-screen" id="start-screen">
+      <h2 class="diff">Wybierz poziom trudności</h2>
+      <div class="difficulty-buttons" id="difficulty-buttons">
+        <button class="level-button" data-level="latwy">Łatwy (4 pary)</button>
+        <button class="level-button" data-level="sredni">Średni (8 par)</button>
+        <button class="level-button" data-level="trudny">Trudny (12 par)</button>
+        <button class="level-button" data-level="masakryczny">Masakryczny (18 par)</button>
+      </div>
+    </div>
+
+    <div class="main hidden" id="game-area">
+      <div id="move-counter"></div>
+      <div class="game-board"></div>
+    </div>
+
+    <div class="main hidden" id="win-screen">
+      <div class="win-message">
+        <h2>!WYGRAŁEŚ!</h2>
+        <div class="win-buttons">
+          <button id="play-again">Zagraj ponownie</button>
+          <button id="go-home">Powrót na główną</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="lose-screen" class="screen hidden">
+      <div class="lose-message">Przegrałeś!
+        <p id="lose-info"></p>
+        <button id="play-again-lose">Zagraj ponownie</button>
+        <button id="go-home-lose">Strona główna</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2025 Bartosz Małysa
+    </div>
+  </div>
+
+  <script src="scripts/game.js"></script>
+</body>
+</html>

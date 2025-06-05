@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bartosz Małysa">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;1,100&family=Jersey+10&display=swap" rel="stylesheet">
+    <title>Gra W Memory</title>
+</head>
+<body>
+    <script src="scripts/animacje.js"></script>
+    <div class="content">
+        <a href="https://www.kwestiasmaku.com/kuchnia_polska/wielkanoc/zurek_na_zakwasie/przepis.html" target="_blank"  class="ad-left ad">
+            <img src="żur-żurek.gif">
+        </a>
+
+        <a href="https://ekonfident.pl" target="_blank" class="ad-right ad">
+            <img src="giphy-2.gif" a>
+        </a>
+
+        <div class="header">
+            <div class="logo"><img src="logo.png" alt="Logo"></div>
+            <label for="menu-toggle" id="menu-label">☰</label>
+            <!-- sorze, for=menu-toggle sprawia ze jak klikniemy w label o id menu-label to kursor automatycznie skupi sie na inpucie o id tym samym co w atrybucie for, czyli menu-toggle, robie tak poniewaz gdybym umiescil input w labelu to ciezej potem sprawic by checkbox zajmowal tyle samo miejsca co label -->
+            <input type="checkbox" id="menu-toggle" hidden>
+            <div class="nav-buttons">
+                <a href="mainpage.html"><button id="main" class="but1">Główna</button></a>
+                <a href="game.html"><button id="start" class="but1">Zagraj</button></a>
+                <a href="genesis.html"><button id="geneza" class="but1">Geneza</button></a>
+                <a href="howtoplay.html"><button id="jak" class="but1">Jak Grać</button></a>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main-container">
+                <div class="topic">
+                    <h2>WITAJ W GRZE MEMORY</h2>
+                </div>
+                <div class="about-memory">
+                    <h3>Czym jest gra Memory?</h3>
+                    <p>Memory, znana również jako gra w pary, to klasyczna gra karciana polegająca na znajdowaniu identycznych par kart spośród rozłożonych na planszy, zakrytych obrazków. Gracze na przemian odkrywają po dwie karty. Jeśli para się zgadza – zostaje odkryta; jeśli nie – karty wracają na swoje miejsce. Celem gry jest zapamiętywanie położenia obrazków i zdobycie jak największej liczby par.</p>
+                    <p>Memory to gra wyjątkowo prosta w zasadach, ale jednocześnie rozwijająca – zarówno dla dzieci, jak i dorosłych. Wymaga od graczy koncentracji, spostrzegawczości oraz dobrej pamięci wzrokowej. Dzięki temu jest często wykorzystywana nie tylko w zabawie domowej, ale także w edukacji, terapii czy zajęciach wspierających rozwój poznawczy.</p>
+                    <p>Wersje gry mogą być różnorodne – od klasycznych z obrazkami zwierząt, po wersje tematyczne: geograficzne, matematyczne czy językowe. W grach komputerowych czy mobilnych Memory często wzbogacane jest o dodatkowe funkcje, takie jak poziomy trudności, ograniczony czas czy efekty dźwiękowe, które uatrakcyjniają rozgrywkę.</p>
+                    <p>Dzięki swojej prostocie i uniwersalności gra Memory stała się jedną z najpopularniejszych gier logicznych na świecie. Można w nią grać solo, w parach lub w większej grupie, co czyni ją świetną formą zarówno relaksu, jak i nauki poprzez zabawę.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            © 2025 Bartosz Małysa
+        </div>
+        <script>
+            const menuToggle = document.getElementById('menu-toggle');
+            const navButtons = document.querySelector('.nav-buttons');
+
+            menuToggle.addEventListener('click', () => {
+            navButtons.classList.toggle('active');
+            });
+        </script>
+    </div>
+</body>
+</html>
